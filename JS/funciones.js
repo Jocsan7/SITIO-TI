@@ -1,27 +1,32 @@
-function saludar(){
-    alert("Bienvenido a la Academia de T.I");
+function mostrarMensaje(event) {
+    event.preventDefault(); // evita que el link recargue
+
+    const mensaje = document.getElementById("mensaje-superior");
+
+    mensaje.classList.add("activo");
+
+    setTimeout(() => {
+        mensaje.classList.remove("activo");
+    }, 3000);
 }
-function suma(){
-    var valor1 = 24;
-    var valor2 = 13;
-    var resultado = valor1 + valor2;
-    alert("Resultado de la suma de " +valor1+ " y " +valor2+ " es: " +resultado)
+
+/* FUNCIONES QUE YA TENÍAS */
+function suma() {
+    let resultado = 24 + 13;
+    alert("Resultado de la suma es: " + resultado);
 }
-function resta(){
-    var valor1 = 24;
-    var valor2 = 13;
-    var resultado = valor1 - valor2;
-    alert("Resultado de la resta de " +valor1+ " y " +valor2+ " es: " +resultado)
+
+function resta() {
+    let resultado = 24 - 13;
+    alert("Resultado de la resta es: " + resultado);
 }
-function mul(){
-    var valor1 = 5;
-    var valor2 = 10;
-    var resultado = valor1 * valor2;
-    alert("Resultado de la multiplicación de " +valor1+ " y " +valor2+ " es: " +resultado)
+
+function mul() {
+    let resultado = 5 * 10;
+    alert("Resultado de la multiplicación es: " + resultado);
 }
-function div(){
-    var valor1 = 24;
-    var valor2 = 12;
-    var resultado = valor1 / valor2;
-    alert("Resultado de la división de " +valor1+ " y " +valor2+ " es: " +resultado)
+
+function div() {
+    let resultado = 24 / 12;
+    alert("Resultado de la división es: " + resultado);
 }
